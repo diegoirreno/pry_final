@@ -57,10 +57,14 @@
     <main>
         <div class="container">
             <div class="abs-center">
-                <form action="#" class="border p-3 form">
+                <form action="" method="post" class="border p-3 form">
                     <div class="text-center mb-4">
                         <img src="../sources/login.png" alt="login" width="150">
                         <h2>Registro de usuario</h2>
+                        <php>
+                            include("modelo/conexion_personasdb.php");
+                            include("controlador/controlador_registrousuario.php");
+                        </php>
                     </div>
                     <div class="form-group col-md-12">
                         <label for="name">Nombre</label>
@@ -87,10 +91,12 @@
                         <input type="text" name="address" id="address" class="form-control border border-dark border-1">
                     </div>
                     <div class="text-center mt-3">
-                        <a href="../indexV4.html" class="btn btn-outline-primary">
-                            <!--<button type="submit" class="btn btn-outline-primary">Aceptar</button>-->
+                        <input class="btn btn-outline-primary" type="submit" value="Registrar" name="registro" class="form-control border border-dark border-1">
+                        <a href="../indexV4.html" >Aceptar</a>
+                       <!-- <a href="../indexV4.html" class="btn btn-outline-primary">
+                            <button type="submit" class="btn btn-outline-primary">Aceptar</button>
                             Aceptar
-                        </a>
+                        </a>-->
                     </div>
                 </form>
     
